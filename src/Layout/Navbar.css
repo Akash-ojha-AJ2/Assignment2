@@ -1,0 +1,126 @@
+/* WRAPPER */
+.pp-nav-wrapper {
+  height: 72px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  font-family: Inter, sans-serif;
+}
+
+/* CONTAINER */
+.pp-nav-container {
+  max-width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+ 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* BRAND */
+.pp-nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.LogoImage{
+  height: 40px;
+  width: 60px;
+}
+
+.pp-nav-logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* RIGHT */
+.pp-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+/* MENU */
+.pp-nav-menu {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pp-nav-link {
+  font-size: 15px;
+  font-weight: 500;
+  color: #111827;
+  text-decoration: none;
+}
+
+.pp-nav-link:hover {
+  color: #10b981;
+}
+
+/* BUTTONS */
+.pp-nav-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+/* BUTTON BASE */
+.pp-nav-btn {
+  position: relative;
+  height: 44px;
+  padding: 0 28px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid #2b2e34;
+  background: #ffffff;
+  color: #2b2e34;
+}
+
+.pp-nav-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  border: 2px solid #2b2e34;
+  transform: translate(4px, 4px);
+  z-index: -1;
+}
+
+.pp-nav-btn:hover::after {
+  transform: translate(2px, 2px);
+}
+
+/* VARIANTS */
+.pp-nav-btn-outline {
+  background: #ffffff;
+}
+
+.pp-nav-btn-orange {
+  background: #ff6a2a;
+  color: #ffffff;
+}
+
+
+
+.nav-item-dropdown .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-arrow {
+  display: inline-flex;
+  transition: transform 0.2s ease;
+}
+
+/* hover effect (optional) */
+.nav-item-dropdown:hover .nav-arrow {
+  transform: rotate(180deg);
+}

@@ -1,0 +1,143 @@
+.hero-section {
+  background: #e9fbf6;
+  overflow: hidden;
+  font-family: Inter, sans-serif;
+  display: flex;
+  align-items: center;
+  padding: 60px 0;
+}
+
+/* LEFT CONTENT */
+.hero-left h1 {
+  font-size: clamp(32px, 5vw, 56px); /* Mobile par automatic chhota ho jayega */
+  font-weight: 800;
+  color: #2b2e34;
+  line-height: 1.1;
+}
+
+.highlight {
+  color: #0ea5a4;
+  font-family: cursive;
+}
+
+.hero-sub {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #4b5563;
+  max-width: 460px;
+}
+
+/* BUTTON */
+.pp-btn {
+  position: relative;
+  height: 50px;
+  padding: 0 28px;
+  border-radius: 14px;
+  font-weight: 700;
+  border: 2px solid #2b2e34;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.rating{
+  padding-top: 30px;
+}
+
+.pp-btn-orange {
+  background: #ff6a2a;
+  color: #fff;
+}
+
+.pp-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid #2b2e34;
+  border-radius: 14px;
+  transform: translate(4px, 4px);
+  z-index: -1;
+}
+
+/* RIGHT IMAGES */
+.hero-right {
+  position: relative;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.postcard-img {
+  width: 100%;
+  max-width: 500px;
+  position: absolute;
+  right: -50px;
+  transform: rotate(-1deg);
+  z-index: 1;
+}
+
+.trend-image {
+  position: absolute;
+  width: 100%;
+  max-width: 500px;
+  right: -50px;
+  transform: translateY(40px); /* Thoda niche */
+  z-index: 5;
+}
+
+/* =========================
+   RESPONSIVE QUERIES
+   ========================= */
+
+/* Tablets (iPad etc) */
+@media (max-width: 991px) {
+  .hero-section {
+    padding: 40px 0;
+    text-align: center;
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .hero-sub {
+    margin: 20px auto;
+  }
+
+  .hero-right {
+    height: 400px;
+  }
+
+  .postcard-img, .trend-image {
+    right: 0;
+    left: 0;
+    margin: 0 auto; /* Center alignment */
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 576px) {
+  .hero-left h1 {
+    font-size: 32px;
+  }
+
+  .hero-sub {
+    font-size: 16px;
+  }
+
+  .hero-left .d-flex {
+    flex-direction: column; /* Button aur stars ek ke niche ek */
+    gap: 20px !important;
+  }
+
+  .hero-right {
+    height: 300px;
+  }
+
+  .postcard-img, .trend-image {
+    max-width: 320px;
+  }
+}

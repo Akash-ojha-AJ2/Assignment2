@@ -1,0 +1,241 @@
+/* =========================
+   CASE STUDY SECTION
+========================= */
+
+.pp-case-section {
+  background: #f2f1ff;
+  padding: 80px 0;
+  font-family: Inter, sans-serif;
+}
+
+/* =========================
+   WRAPPER
+========================= */
+
+.pp-case-wrapper {
+  display: flex;
+  align-items: flex-start; /* 👈 VERY IMPORTANT */
+  gap: 500px;
+}
+
+/* =========================
+   LEFT : POSTCARD IMAGES
+========================= */
+
+.pp-case-left {
+  position: relative;
+  width: 420px;
+  height: 300px;      /* 👈 FIXED HEIGHT */
+
+}
+
+.pp-case-img {
+  position: absolute;
+  width: 500px;
+  top: 0;
+  left: 0;
+
+}
+
+
+
+/* =========================
+   RIGHT : CONTENT
+========================= */
+
+.pp-case-right {
+  max-width: 540px;
+  padding-top: 10px; /* optional fine tuning */
+}
+
+/* Heading */
+.pp-case-right h2 {
+  font-size: 40px;
+  font-weight: 900;
+  color: #1f2937;
+  line-height: 1.2;
+}
+
+.pp-case-right h2 span {
+  color: #0ea5a4;
+  font-family: cursive;
+}
+
+/* Description */
+.pp-case-desc {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #4b5563;
+  line-height: 1.7;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.pp-case-stats {
+  margin-top: 32px;
+  display: flex;
+  gap: 40px;
+}
+
+.pp-case-stats div {
+  display: flex;
+  flex-direction: column;
+}
+
+.pp-case-stats strong {
+  font-size: 22px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.pp-case-stats span {
+  margin-top: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+/* =========================
+   CTA BUTTON
+========================= */
+
+.pp-case-btn {
+  margin-top: 34px;
+  height: 44px;
+  padding: 0 28px;
+  border-radius: 14px;
+  border: 2px solid #2b2e34;
+  background: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  color: #111827;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Button shadow border */
+.pp-case-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  border: 2px solid #2b2e34;
+  transform: translate(4px, 4px);
+  z-index: -1;
+}
+
+/* Hover effect */
+.pp-case-btn:hover::after {
+  transform: translate(2px, 2px);
+}
+
+/* =========================
+   BRAND LOGOS STRIP
+========================= */
+
+.pp-case-brands {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  opacity: 0.75;
+}
+
+.pp-case-brands img {
+  height: 22px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.2s ease, opacity 0.2s ease;
+}
+
+.pp-case-brands img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+  .pp-case-wrapper {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .pp-case-left {
+    width: 100%;
+    height: 320px;
+  }
+
+  .pp-case-right {
+    text-align: center;
+  }
+
+  .pp-case-stats {
+    justify-content: center;
+  }
+
+  .pp-case-brands {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 576px) {
+  .pp-case-img {
+    width: 260px;
+  }
+
+  .pp-case-right h2 {
+    font-size: 32px;
+  }
+}
+
+
+
+
+
+/* =========================
+   BRAND LOGOS STRIP (Updated)
+========================= */
+
+.pp-case-brands {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  position: relative;
+  padding-bottom: 15px; /* Line aur logos ke beech gap */
+  border-bottom: 2px solid #e5e7eb; /* Yeh light grey base line hai */
+  width: 100%;
+}
+
+/* Teal Color Active Line */
+.pp-case-brands::after {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* Base line ke upar match karne ke liye */
+  left: 0;
+  width: 25%; /* Jitna bada green bar chahiye */
+  height: 3px; /* Bar ki thickness */
+  background-color: #0ea5a4; /* Teal color jo image mein hai */
+  border-radius: 2px;
+}
+
+.pp-case-brands img {
+  height: 22px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.5; /* Thoda light dikhne ke liye */
+  transition: all 0.3s ease;
+}
+
+/* Hover karne par color wapas aaye */
+.pp-case-brands img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}

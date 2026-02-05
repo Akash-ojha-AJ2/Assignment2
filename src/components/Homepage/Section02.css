@@ -1,0 +1,87 @@
+.trusted-section {
+  background: #fff;
+  padding: 80px 0; /* Mobile ke liye padding thodi kam ki hai */
+  font-family: Inter, sans-serif;
+}
+
+.trusted-heading {
+  font-size: 42px;
+  font-weight: 800;
+  color: #2b2e34;
+  line-height: 1.2;
+  margin-bottom: 40px;
+}
+
+.trusted-heading span {
+  color: #0ea5a4;
+  font-family: cursive;
+}
+
+/* ROW */
+.brands-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Desktop: 4 cards */
+  gap: 40px;
+  max-width: 1200px;
+  margin: 60px auto 0;
+  padding: 0 15px;
+}
+
+
+/* CARD */
+.brand-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+/* TOP IMAGE */
+.brand-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px; /* Optional: achha dikhne ke liye */
+}
+
+/* BRAND NAME IMAGE */
+.brand-name {
+  margin-top: 20px;
+  height: 24px;
+  max-width: 80%;
+  object-fit: contain;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+/* Tablet aur Mobile (1 row mein 2 cards) */
+@media (max-width: 991px) {
+  .trusted-heading {
+    font-size: 32px;
+  }
+
+  .brands-row {
+    grid-template-columns: repeat(2, 1fr); /* 👈 2 cards per row */
+    gap: 40px;
+  }
+}
+
+
+/* Chote Mobile Phones */
+@media (max-width: 480px) {
+  .trusted-heading {
+    font-size: 26px;
+  }
+
+  .brands-row {
+    gap: 30px;
+  }
+
+  .brand-name {
+    height: 18px;
+  }
+}

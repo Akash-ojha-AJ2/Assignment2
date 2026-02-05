@@ -1,6 +1,3 @@
-/* ============================================================
-   FOOTER SECTION Styling
-   ============================================================ */
 
 .pp-footer {
   padding: 80px 0 40px;
@@ -17,12 +14,12 @@
 
 .pp-footer-top {
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr 1.2fr; /* 4 Columns */
+  grid-template-columns: 1.2fr 1fr 1fr 1.2fr; 
   gap: 40px;
   margin-bottom: 60px;
 }
 
-/* Eco Friendly Column */
+
 .pp-footer-eco {
   display: flex;
   flex-direction: column;
@@ -39,7 +36,7 @@
   line-height: 1.6;
 }
 
-/* Links Columns */
+
 .pp-footer-links h4 {
   font-size: 14px;
   font-weight: 800;
@@ -71,7 +68,7 @@
   color: #0ea5a4;
 }
 
-/* Contact Column */
+
 .pp-footer-contact {
   display: flex;
   flex-direction: column;
@@ -96,7 +93,7 @@
   line-height: 1.6;
 }
 
-/* --- BOTTOM BAR --- */
+
 .pp-footer-bottom {
   border-top: 1px solid #e5e7eb;
   padding-top: 40px;
@@ -110,10 +107,14 @@
   flex-direction: column;
   gap: 10px;
 }
+.pp-brand-text{
+  color: #121212;
 
-.pp-footer-logo {
-    height: 50px;
-    width: 90px;
+}
+
+.pp-footer-logo-icon {
+    height: 30px;
+    width: 50px;
 }
 
 .pp-copyright {
@@ -140,41 +141,406 @@
   padding: 10px 25px;
   border-radius: 10px;
   border: 2px solid #111827;
-  background: #ff6b35; /* Orange color */
+  background: #ff6b35; 
   color: white;
   font-weight: 700;
   cursor: pointer;
   box-shadow: 3px 3px 0px #111827;
 }
 
-/* Responsive */
+
+/* Mobile Responsive Improvements */
 @media (max-width: 992px) {
-  .pp-footer-top {
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
+  .pp-footer {
+    padding: 60px 0 30px;
   }
-  .pp-footer-bottom {
-    flex-direction: column;
-    gap: 30px;
+
+  .pp-footer-container {
+    padding: 0 16px;
+  }
+
+  .pp-footer-top {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+
+  .pp-footer-eco {
+    text-align: center;
+    align-items: center;
+    gap: 16px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .pp-eco-logo {
+    width: 80px;
+  }
+
+  .pp-eco-text {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .pp-footer-links {
     text-align: center;
   }
+
+  .pp-footer-links h4 {
+    font-size: 13px;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+  }
+
+  .pp-footer-links ul li {
+    margin-bottom: 12px;
+  }
+
+  .pp-footer-links ul li a {
+    font-size: 14px;
+  }
+
+  .pp-footer-contact {
+    text-align: center;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .pp-contact-item {
+    justify-content: center;
+    font-size: 14px;
+    gap: 8px;
+  }
+
+  .pp-facility-text {
+    font-size: 13px;
+    line-height: 1.5;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .pp-footer-bottom {
+    padding-top: 30px;
+    gap: 25px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pp-footer-brand {
+    align-items: center;
+    gap: 8px;
+  }
+
+  .pp-brand-logo-wrapper {
+    justify-content: center;
+  }
+
+  .pp-brand-text {
+    font-size: 20px;
+  }
+
+  .pp-copyright {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .pp-footer-btns {
+    width: 100%;
+    max-width: 300px;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .pp-btn-login,
+  .pp-btn-orange {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
 }
 
-.pp-brand-logo-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 8px; /* Icon aur text ke beech ka gap */
-  margin-bottom: 5px;
+/* Mobile (768px से छोटे) */
+@media (max-width: 768px) {
+  .pp-footer {
+    padding: 50px 0 25px;
+  }
+
+  .pp-footer-top {
+    gap: 35px;
+  }
+
+  .pp-eco-text {
+    font-size: 13.5px;
+    padding: 0 10px;
+  }
+
+  .pp-footer-links h4 {
+    font-size: 12.5px;
+    margin-bottom: 18px;
+  }
+
+  .pp-footer-links ul li {
+    margin-bottom: 10px;
+  }
+
+  .pp-footer-links ul li a {
+    font-size: 13.5px;
+  }
+
+  .pp-contact-item {
+    font-size: 13.5px;
+  }
+
+  .pp-facility-text {
+    font-size: 12.5px;
+    padding: 0 20px;
+  }
+
+  .pp-brand-text {
+    font-size: 18px;
+  }
+
+  .pp-footer-logo-icon {
+    height: 22px;
+  }
 }
 
-.pp-footer-logo-icon {
-  height: 24px; /* Icon ki height */
-  width: auto;
+/* Small Mobile (576px से छोटे) */
+@media (max-width: 576px) {
+  .pp-footer {
+    padding: 40px 0 20px;
+  }
+
+  .pp-footer-container {
+    padding: 0 12px;
+  }
+
+  .pp-footer-top {
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  .pp-footer-eco {
+    gap: 12px;
+  }
+
+  .pp-eco-logo {
+    width: 70px;
+  }
+
+  .pp-eco-text {
+    font-size: 13px;
+    line-height: 1.4;
+    padding: 0;
+  }
+
+  /* Group links columns for better mobile view */
+  .pp-footer-links:first-of-type {
+    order: 2;
+  }
+
+  .pp-footer-links:last-of-type {
+    order: 3;
+  }
+
+  .pp-footer-contact {
+    order: 1;
+  }
+
+  .pp-footer-links h4 {
+    margin-bottom: 16px;
+  }
+
+  .pp-footer-links ul li {
+    margin-bottom: 8px;
+  }
+
+  .pp-footer-links ul li a {
+    font-size: 13px;
+  }
+
+  .pp-contact-item {
+    font-size: 13px;
+  }
+
+  .pp-facility-text {
+    font-size: 12px;
+    padding: 0 10px;
+  }
+
+  .pp-footer-bottom {
+    padding-top: 25px;
+    gap: 20px;
+  }
+
+  .pp-footer-btns {
+    max-width: 280px;
+  }
+
+  .pp-btn-login,
+  .pp-btn-orange {
+    padding: 11px 18px;
+    font-size: 13px;
+  }
+
+  .pp-brand-text {
+    font-size: 16px;
+  }
+
+  .pp-footer-logo-icon {
+    height: 20px;
+  }
 }
 
-.pp-brand-text {
-  font-size: 22px;
-  font-weight: 800; /* Bold text */
-  color: #111827; /* Dark black/blue color */
-  letter-spacing: -0.5px;
+/* Extra Small Screens (400px से छोटे) */
+@media (max-width: 400px) {
+  .pp-footer {
+    padding: 35px 0 20px;
+  }
+
+  .pp-eco-text {
+    font-size: 12.5px;
+  }
+
+  .pp-footer-links h4 {
+    font-size: 12px;
+  }
+
+  .pp-footer-links ul li a {
+    font-size: 12.5px;
+  }
+
+  .pp-contact-item {
+    font-size: 12.5px;
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+  }
+
+  .pp-facility-text {
+    font-size: 11.5px;
+  }
+
+  .pp-footer-btns {
+    max-width: 250px;
+  }
+
+  .pp-btn-login,
+  .pp-btn-orange {
+    padding: 10px 16px;
+    font-size: 12.5px;
+  }
+
+  .pp-copyright {
+    font-size: 11px;
+  }
+}
+
+/* Tablet Optimization (768px - 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+  .pp-footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .pp-footer-eco {
+    grid-column: span 2;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .pp-footer-contact {
+    grid-column: span 2;
+    text-align: center;
+  }
+
+  .pp-footer-bottom {
+    padding-top: 35px;
+  }
+}
+
+/* Landscape Mode for Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .pp-footer {
+    padding: 30px 0 20px;
+  }
+
+  .pp-footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .pp-footer-eco {
+    grid-column: span 2;
+    max-width: 500px;
+  }
+
+  .pp-footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  .pp-footer-brand {
+    align-items: flex-start;
+  }
+
+  .pp-footer-btns {
+    width: auto;
+    max-width: none;
+    flex-direction: row;
+  }
+
+  .pp-btn-login,
+  .pp-btn-orange {
+    width: auto;
+    min-width: 120px;
+  }
+}
+
+/* Button hover effects (desktop only) */
+@media (min-width: 993px) {
+  .pp-btn-login:hover,
+  .pp-btn-orange:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px #111827;
+  }
+
+  .pp-btn-login,
+  .pp-btn-orange {
+    transition: all 0.2s ease;
+  }
+}
+
+/* Better touch targets for mobile */
+@media (pointer: coarse) {
+  .pp-btn-login,
+  .pp-btn-orange {
+    min-height: 44px;
+  }
+
+  .pp-footer-links ul li a {
+    display: inline-block;
+    padding: 4px 0;
+  }
+}
+
+/* Improve link spacing for better tap targets */
+.pp-footer-links ul li {
+  line-height: 1.4;
+}
+
+/* Ensure text doesn't overflow on small screens */
+.pp-eco-text,
+.pp-facility-text,
+.pp-copyright {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Add some breathing room for eco text */
+.pp-eco-text {
+  max-width: 90%;
 }

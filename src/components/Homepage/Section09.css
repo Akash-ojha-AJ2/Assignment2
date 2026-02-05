@@ -1,9 +1,6 @@
-/* ============================================================
-   SECTION 09: RISK-FREE CTA (Orange Background)
-   ============================================================ */
 
 .risk-free-container {
-  background-color: #ff6b35; /* Bright Orange */
+  background-color: #ff6b35;
   width: 100%;
   overflow: hidden;
   font-family: 'Inter', sans-serif;
@@ -13,14 +10,13 @@
 }
 
 .risk-free-content {
-  max-width: 1300px; /* Thoda wide rakha hai achha dikhne ke liye */
+  max-width: 1300px;
   width: 90%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* --- Left Side: 40% Area --- */
 .risk-free-left {
   flex: 0 0 40%;
   color: #ffffff;
@@ -46,7 +42,6 @@
 
 }
 
-/* Actions: Button & Rating */
 .risk-free-actions {
   display: flex;
   align-items: center;
@@ -63,7 +58,7 @@
   font-weight: 800;
   font-size: 16px;
   cursor: pointer;
-  box-shadow: 5px 5px 0px #111827; /* Solid Black Shadow */
+  box-shadow: 5px 5px 0px #111827; 
   transition: all 0.2s ease;
   text-transform: uppercase;
 }
@@ -96,78 +91,400 @@
   font-weight: 500;
 }
 
-/* --- Right Side: 60% Area --- */
+
 .risk-free-right {
   flex: 0 0 60%;
   display: flex;
   justify-content: flex-end;
-  position: relative; /* Image ko control karne ke liye base */
-  height: 450px; /* Container ki fix height taaki image upar nikal sake */
+  position: relative; 
+  height: 450px; 
 }
 
 .risk-free-image {
-  position: absolute; /* Flow se bahar nikalne ke liye */
-  bottom: -50px;      /* Niche se thoda adjust karne ke liye */
-  right: -60px;       /* Screen ke edge se bahar nikalne ke liye */
-  width: 130%;        /* Image ko kafi bada karne ke liye */
-  max-width: 650px;   /* Maximum size limit */
+  position: absolute; 
+  bottom: -50px;     
+  right: -60px;       
+  width: 130%;      
+  max-width: 650px;  
   height: auto;
   pointer-events: none;
   z-index: 5;
 }
 
-/* --- Responsive Layout --- */
 
-@media (max-width: 1100px) {
-  .risk-free-left h2 {
-    font-size: 52px;
-  }
-}
 
+/* Mobile Responsive Improvements */
 @media (max-width: 992px) {
+  .risk-free-container {
+    padding: 60px 0 0;
+    min-height: auto;
+  }
+
   .risk-free-content {
     flex-direction: column;
     text-align: center;
-    width: 95%;
-  }
-
-  .risk-free-left, 
-  .risk-free-right {
-    flex: 0 0 100%;
-    max-width: 100%;
+    width: 90%;
+    gap: 30px;
   }
 
   .risk-free-left {
-    margin-bottom: 50px;
+    flex: 0 0 100%;
+    width: 100%;
+    margin: 0;
+    order: 1;
+    padding: 0 20px;
+  }
+
+  .risk-free-left h2 {
+    font-size: 42px;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin: 0 0 20px 0;
+  }
+
+  .risk-free-left h2 br {
+    display: inline; /* Mobile pe breaks maintain karo */
+  }
+
+  .risk-free-left p.risk-subtext {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.4;
+    padding: 0 10px;
   }
 
   .risk-free-actions {
-    justify-content: center;
     flex-direction: column;
     gap: 20px;
-  }
-
-.risk-free-right {
-    height: auto; /* Mobile par height auto rakhein */
-    margin-top: 40px;
-  }
-
-.risk-free-image {
-    position: relative; /* Mobile par layout na bigde */
+    align-items: center;
+    margin-bottom: 25px;
     width: 100%;
+  }
+
+  .risk-free-btn {
+    width: 100%;
+    max-width: 280px;
+    padding: 16px 32px;
+    font-size: 15px;
+    order: 1;
+  }
+
+  .risk-free-rating {
+    order: 2;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .risk-free-stars {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+
+  .risk-free-rating-label {
+    font-size: 14px;
+    margin-top: 0;
+    font-weight: 600;
+  }
+
+  .risk-free-disclaimer {
+    font-size: 12px;
+    line-height: 1.4;
+    margin-top: 20px;
+    padding: 0 15px;
+    order: 3;
+  }
+
+  .risk-free-right {
+    flex: 0 0 100%;
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    margin-top: 0;
+    order: 2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .risk-free-image {
+    position: relative;
     bottom: 0;
     right: 0;
-    margin-right: 0;
-    transform: rotate(0deg);
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto;
+    transform: none;
   }
 }
 
-@media (max-width: 576px) {
-  .risk-free-left h2 {
-    font-size: 42px;
-  }
-  
+/* Mobile (768px से छोटे) */
+@media (max-width: 768px) {
   .risk-free-container {
-    padding: 60px 0;
+    padding: 50px 0 0;
   }
+
+  .risk-free-left h2 {
+    font-size: 36px;
+  }
+
+  .risk-free-left p.risk-subtext {
+    font-size: 16px;
+    padding: 0 5px;
+  }
+
+  .risk-free-btn {
+    max-width: 260px;
+    padding: 14px 28px;
+    font-size: 14px;
+  }
+
+  .risk-free-stars {
+    font-size: 18px;
+  }
+
+  .risk-free-rating-label {
+    font-size: 13px;
+  }
+
+  .risk-free-disclaimer {
+    font-size: 11.5px;
+    padding: 0 10px;
+  }
+
+  .risk-free-right {
+    min-height: 280px;
+  }
+
+  .risk-free-image {
+    max-width: 450px;
+  }
+}
+
+/* Small Mobile (576px से छोटे) */
+@media (max-width: 576px) {
+  .risk-free-container {
+    padding: 40px 0 0;
+  }
+
+  .risk-free-content {
+    width: 95%;
+  }
+
+  .risk-free-left h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+
+  .risk-free-left p.risk-subtext {
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+
+  .risk-free-actions {
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .risk-free-btn {
+    max-width: 240px;
+    padding: 13px 24px;
+    font-size: 13px;
+    box-shadow: 3px 3px 0px #111827;
+  }
+
+  .risk-free-btn:hover {
+    box-shadow: 1px 1px 0px #111827;
+  }
+
+  .risk-free-rating {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .risk-free-stars {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+  }
+
+  .risk-free-rating-label {
+    font-size: 12px;
+  }
+
+  .risk-free-disclaimer {
+    font-size: 11px;
+    padding: 0 8px;
+  }
+
+  .risk-free-right {
+    min-height: 250px;
+  }
+
+  .risk-free-image {
+    max-width: 380px;
+  }
+}
+
+/* Extra Small Screens (400px से छोटे) */
+@media (max-width: 400px) {
+  .risk-free-left h2 {
+    font-size: 28px;
+  }
+
+  .risk-free-left p.risk-subtext {
+    font-size: 14px;
+  }
+
+  .risk-free-btn {
+    max-width: 220px;
+    padding: 12px 20px;
+    font-size: 12px;
+  }
+
+  .risk-free-stars {
+    font-size: 15px;
+  }
+
+  .risk-free-rating-label {
+    font-size: 11px;
+  }
+
+  .risk-free-disclaimer {
+    font-size: 10px;
+  }
+
+  .risk-free-right {
+    min-height: 220px;
+  }
+
+  .risk-free-image {
+    max-width: 320px;
+  }
+}
+
+/* Tablet Optimization (768px - 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+  .risk-free-container {
+    padding: 70px 0 0;
+  }
+
+  .risk-free-left h2 {
+    font-size: 46px;
+  }
+
+  .risk-free-left p.risk-subtext {
+    font-size: 20px;
+  }
+
+  .risk-free-actions {
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .risk-free-btn {
+    width: auto;
+    min-width: 200px;
+  }
+
+  .risk-free-right {
+    min-height: 350px;
+  }
+
+  .risk-free-image {
+    max-width: 550px;
+  }
+}
+
+/* Landscape Mode for Mobile */
+@media (max-height: 600px) and (orientation: landscape) {
+  .risk-free-container {
+    padding: 40px 0 0;
+    min-height: auto;
+  }
+
+  .risk-free-content {
+    flex-direction: row;
+    text-align: left;
+    gap: 20px;
+  }
+
+  .risk-free-left {
+    flex: 0 0 50%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .risk-free-left h2 {
+    font-size: 32px;
+  }
+
+  .risk-free-left p.risk-subtext {
+    font-size: 14px;
+    padding: 0;
+  }
+
+  .risk-free-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .risk-free-btn {
+    max-width: 200px;
+  }
+
+  .risk-free-rating {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .risk-free-right {
+    flex: 0 0 50%;
+    min-height: 250px;
+    align-items: center;
+  }
+
+  .risk-free-image {
+    max-width: 100%;
+  }
+}
+
+/* Large Mobile Screens (iPhone X/XS/11/12 Pro Max) */
+@media (min-width: 375px) and (max-width: 428px) and (max-height: 926px) {
+  .risk-free-left h2 {
+    font-size: 34px;
+  }
+
+  .risk-free-left p.risk-subtext {
+    font-size: 16px;
+  }
+
+  .risk-free-image {
+    max-width: 400px;
+  }
+}
+
+/* Remove image overflow on mobile */
+.risk-free-right {
+  overflow: hidden;
+}
+
+/* Button tap effects for touch devices */
+@media (pointer: coarse) {
+  .risk-free-btn {
+    min-height: 50px; /* Better touch target */
+  }
+
+  .risk-free-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #111827;
+  }
+}
+
+/* Smooth transitions */
+.risk-free-btn {
+  transition: all 0.2s ease-in-out;
 }

@@ -12,13 +12,11 @@ function Section05() {
     <section className="features-grid-section">
       <div className="container">
 
-        {/* HEADING */}
         <h2 className="features-grid-heading">
           Everything your brand needs to <br />
           <span>make your brand unforgettable</span>
         </h2>
 
-        {/* GRID */}
         <div className="features-grid">
 
           <div className="feature-card beige">

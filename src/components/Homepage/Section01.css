@@ -5,15 +5,18 @@
   display: flex;
   align-items: center;
   padding: 60px 0;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
-/* LEFT CONTENT */
 .hero-left h1 {
-  font-size: clamp(32px, 5vw, 56px); /* Mobile par automatic chhota ho jayega */
+  font-size: clamp(28px, 4.5vw, 56px);
   font-weight: 800;
   color: #2b2e34;
-  line-height: 1.1;
+  line-height: 1.15;
+  max-width: 520px; /* 👈 desktop pe line control */
 }
+
 
 .highlight {
   color: #0ea5a4;
@@ -27,7 +30,7 @@
   max-width: 460px;
 }
 
-/* BUTTON */
+
 .pp-btn {
   position: relative;
   height: 50px;
@@ -58,7 +61,7 @@
   z-index: -1;
 }
 
-/* RIGHT IMAGES */
+
 .hero-right {
   position: relative;
   height: 500px;
@@ -81,63 +84,205 @@
   width: 100%;
   max-width: 500px;
   right: -50px;
-  transform: translateY(40px); /* Thoda niche */
+  transform: translateY(40px); 
   z-index: 5;
 }
 
-/* =========================
-   RESPONSIVE QUERIES
-   ========================= */
 
-/* Tablets (iPad etc) */
-@media (max-width: 991px) {
+
+/* Mobile Responsive Improvements */
+/* Mobile Responsive Improvements */
+@media (max-width: 768px) {
   .hero-section {
-    padding: 40px 0;
-    text-align: center;
+    padding: 40px 0 40px;
+    min-height: auto;
+    display: block;
+  }
+
+  .container-fluid {
+    padding: 0 16px !important;
   }
 
   .hero-left {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 30px;
+    order: 1;
+  }
+
+  .hero-left h1 {
+    font-size: 32px;
+    line-height: 1.2;
+    max-width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .highlight {
+    display: inline-block;
+  }
+
+  .hero-sub {
+    font-size: 15px;
+    line-height: 1.5;
+    max-width: 100%;
+    margin: 16px auto 24px;
+    color: #4a5568;
+    text-align: center;
+  }
+
+  /* Button और Rating को सही से align करना */
+  .hero-left .d-flex {
+    flex-direction: column;
+    gap: 16px !important;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    display: flex !important;
+  }
+
+  /* Button को छोटा और सही position में करना */
+  .pp-btn {
+    height: 55px;
+    padding: 0 24px;
+    font-size: 15px;
+    width: auto;
+    min-width: 260px;
+    max-width: 300px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  /* Button के लिए special styling */
+  .pp-btn-orange {
+    background: #ff6a2a;
+    color: #fff;
+    border: 2px solid #2b2e34;
+  }
+
+  .rating {
+    padding-top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 50px;
+    gap: 4px;
+    margin-top: 8px;
   }
 
-  .hero-sub {
-    margin: 20px auto;
+  .rating div {
+    font-size: 13px;
+    color: #666;
+    font-weight: 500;
   }
 
   .hero-right {
-    height: 400px;
+    height: auto;
+    min-height: 280px;
+    margin-top: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+    padding-top: 20px;
   }
 
-  .postcard-img, .trend-image {
-    right: 0;
-    left: 0;
-    margin: 0 auto; /* Center alignment */
+  /* Images को सही से center करना */
+  .postcard-img {
+    position: relative;
+    width: 85%;
+    max-width: 300px;
+    height: auto;
+    transform: rotate(-5deg);
+    z-index: 1;
+    margin-right: 30px;
+  }
+
+  .trend-image {
+    position: absolute;
+    width: 85%;
+    max-width: 300px;
+    height: auto;
+    transform: rotate(-5deg) translateY(25px);
+    z-index: 2;
   }
 }
 
-/* Mobile Phones */
-@media (max-width: 576px) {
+/* Extra Small Screens (Below 400px) */
+@media (max-width: 400px) {
   .hero-left h1 {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .hero-sub {
-    font-size: 16px;
+    font-size: 14px;
+    padding: 0 5px;
   }
 
-  .hero-left .d-flex {
-    flex-direction: column; /* Button aur stars ek ke niche ek */
-    gap: 20px !important;
+  /* Button को और छोटा करना */
+  .pp-btn {
+    height: 55px;
+    padding: 0 20px;
+    font-size: 14px;
+    min-width: 240px;
+    max-width: 280px;
   }
 
-  .hero-right {
-    height: 300px;
+  .rating div {
+    font-size: 12px;
   }
 
-  .postcard-img, .trend-image {
-    max-width: 320px;
+  .postcard-img,
+  .trend-image {
+    width: 90%;
+    max-width: 280px;
+  }
+}
+
+/* Small Mobile Screens (Below 350px) */
+@media (max-width: 350px) {
+  .hero-left h1 {
+    font-size: 26px;
+  }
+  
+  .hero-sub {
+    font-size: 14px;
+  }
+  
+  /* Button को छोटे screens के लिए और optimize करना */
+  .pp-btn {
+    font-size: 13px;
+    height: 55px;
+    padding: 0 16px;
+    min-width: 220px;
+    max-width: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .d-flex {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+  
+  .gap-4 {
+    gap: 1rem !important;
+  }
+  
+  .mt-4 {
+    margin-top: 1.5rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .pp-btn {
+    width: fit-content !important;
+    min-width: fit-content !important;
+    max-width: 280px !important;
+    padding: 10px 24px !important;
+    font-size: 14px !important;
   }
 }

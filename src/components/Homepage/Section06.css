@@ -4,7 +4,6 @@
   font-family: Inter, sans-serif;
 }
 
-/* Heading */
 .pp-steps-heading {
   text-align: center;
   font-size: 42px;
@@ -19,18 +18,18 @@
   font-family: cursive;
 }
 
-/* Content layout */
+
 .pp-steps-content {
   display: flex;
   gap: 80px;
 }
 
-/* LEFT */
+
 .pp-steps-left {
   width: 360px;
 }
 
-/* Step base */
+
 .pp-step {
   display: flex;
   align-items: flex-start;
@@ -39,7 +38,7 @@
   position: relative;
 }
 
-/* Vertical line */
+
 .pp-step::before {
   content: "";
   position: absolute;
@@ -58,32 +57,32 @@
   bottom: 50%;
 }
 
-/* Numbers */
+
 .pp-step-number {
-  font-size: 16px;          /* ⬆ from 14 */
+  font-size: 16px;     
   font-weight: 700;
-  color: #6b7280;           /* darker gray */
+  color: #6b7280;          
   width: 32px;
 }
 
 
-/* Titles */
+
 .pp-step-title {
-  font-size: 22px;          /* ⬆ from 18 */
+  font-size: 22px;        
   font-weight: 800;
-  color: #374151;           /* dark gray */
+  color: #374151;          
 }
 
 
-/* Muted */
+
 .pp-step.muted {
-  opacity: 0.7;             /* ⬆ from 0.5 */
+  opacity: 0.7;          
 }
 
-/* ACTIVE STEP */
+
 .pp-step.active .pp-step-number,
 .pp-step.active .pp-step-title {
-  color: #0f766e;           /* deeper green */
+  color: #0f766e;          
 }
 
 .pp-step.active::before {
@@ -92,25 +91,307 @@
 
 .pp-step-text p {
   margin-top: 10px;
-  font-size: 16px;          /* ⬆ from 14 */
+  font-size: 16px;       
   font-weight: 500;
-  color: #374151;           /* darker text */
+  color: #374151;     
   line-height: 1.7;
 }
 
-/* RIGHT */
+
 .pp-steps-right {
   flex: 1;
   min-height: 300px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+
+/* Mobile Responsive Improvements */
+@media (max-width: 992px) {
+  .pp-steps-section {
+    padding: 80px 0;
+  }
+
+  .pp-steps-heading {
+    font-size: 32px;
+    margin-bottom: 60px;
+    padding: 0 20px;
+  }
+
   .pp-steps-content {
     flex-direction: column;
+    gap: 50px;
+    padding: 0 20px;
   }
 
   .pp-steps-left {
     width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
   }
+
+  .pp-step {
+    padding: 24px 0;
+    gap: 24px;
+  }
+
+  .pp-step-number {
+    font-size: 15px;
+    width: 28px;
+  }
+
+  .pp-step-title {
+    font-size: 20px;
+  }
+
+  .pp-step-text p {
+    font-size: 15px;
+    margin-top: 12px;
+    line-height: 1.6;
+  }
+  .pp-steps-right {
+  flex: 1;
+  min-height: 0px;
+}
+
+}
+
+/* Mobile (768px से छोटे) */
+@media (max-width: 768px) {
+  .pp-steps-section {
+    padding: 60px 0;
+  }
+
+  .pp-steps-heading {
+    font-size: 28px;
+    margin-bottom: 50px;
+    padding: 0 16px;
+  }
+
+  .pp-steps-content {
+    gap: 40px;
+    padding: 0 16px;
+  }
+
+  .pp-step {
+    padding: 20px 0;
+    gap: 20px;
+  }
+
+  .pp-step-number {
+    font-size: 14px;
+    width: 26px;
+  }
+
+  .pp-step-title {
+    font-size: 18px;
+  }
+
+  .pp-step-text p {
+    font-size: 14px;
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+
+  .pp-step::before {
+    left: 12px;
+  }
+}
+
+/* Small Mobile (576px से छोटे) */
+@media (max-width: 576px) {
+  .pp-steps-section {
+    padding: 50px 0;
+  }
+
+  .pp-steps-heading {
+    font-size: 26px;
+    margin-bottom: 40px;
+  }
+
+  .pp-steps-heading br {
+    display: none; /* Mobile pe line breaks hata do */
+  }
+
+  .pp-step {
+    padding: 18px 0;
+    gap: 18px;
+  }
+
+  .pp-step-number {
+    font-size: 13px;
+    width: 24px;
+  }
+
+  .pp-step-title {
+    font-size: 17px;
+  }
+
+  .pp-step-text p {
+    font-size: 13.5px;
+    margin-top: 8px;
+  }
+
+  .pp-step::before {
+    left: 11px;
+  }
+}
+
+/* Extra Small Screens (400px से छोटे) */
+@media (max-width: 400px) {
+  .pp-steps-heading {
+    font-size: 24px;
+  }
+
+  .pp-steps-left {
+    max-width: 100%;
+  }
+
+  .pp-step {
+    padding: 16px 0;
+    gap: 16px;
+  }
+
+  .pp-step-number {
+    font-size: 12px;
+    width: 22px;
+  }
+
+  .pp-step-title {
+    font-size: 16px;
+  }
+
+  .pp-step-text p {
+    font-size: 13px;
+  }
+
+  .pp-step::before {
+    left: 10px;
+  }
+}
+
+/* Tablet Optimization (768px - 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+  .pp-steps-section {
+    padding: 90px 0;
+  }
+
+  .pp-steps-heading {
+    font-size: 36px;
+  }
+
+  .pp-steps-content {
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .pp-step {
+    padding: 26px 0;
+  }
+
+  .pp-step-number {
+    font-size: 16px;
+  }
+
+  .pp-step-title {
+    font-size: 22px;
+  }
+
+  .pp-step-text p {
+    font-size: 16px;
+  }
+}
+
+/* Large Tablets (992px - 1200px) */
+@media (min-width: 993px) and (max-width: 1200px) {
+  .pp-steps-content {
+    gap: 60px;
+  }
+
+  .pp-steps-left {
+    width: 320px;
+  }
+}
+
+/* Landscape Mode for Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .pp-steps-section {
+    padding: 40px 0;
+  }
+
+  .pp-steps-heading {
+    margin-bottom: 30px;
+    font-size: 26px;
+  }
+
+  .pp-steps-content {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .pp-steps-left {
+    width: 50%;
+  }
+}
+
+/* Add vertical spacing between steps on mobile */
+.pp-step {
+  border-bottom: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+.pp-step:last-child {
+  border-bottom: none;
+}
+
+/* Improve the timeline line */
+.pp-step::before {
+  background: #d1d5db;
+  z-index: 1;
+}
+
+.pp-step.active::before {
+  background: #0ea5a4;
+  width: 2px;
+}
+
+/* Add circle indicators */
+.pp-step-number {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.pp-step-number::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #6b7280;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.pp-step.active .pp-step-number::before {
+  background: #0ea5a4;
+  width: 14px;
+  height: 14px;
+}
+
+/* Adjust text alignment */
+.pp-step-text {
+  width: calc(100% - 60px);
+}
+
+/* Improve readability */
+.pp-step-text p {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Container max-width */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }

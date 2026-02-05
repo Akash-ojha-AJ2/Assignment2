@@ -1,6 +1,3 @@
-/* =========================
-   CASE STUDY SECTION
-========================= */
 
 .pp-case-section {
   background: #f2f1ff;
@@ -8,24 +5,18 @@
   font-family: Inter, sans-serif;
 }
 
-/* =========================
-   WRAPPER
-========================= */
 
 .pp-case-wrapper {
   display: flex;
-  align-items: flex-start; /* 👈 VERY IMPORTANT */
+  align-items: flex-start; 
   gap: 500px;
 }
 
-/* =========================
-   LEFT : POSTCARD IMAGES
-========================= */
 
 .pp-case-left {
   position: relative;
   width: 420px;
-  height: 300px;      /* 👈 FIXED HEIGHT */
+  height: 300px;   
 
 }
 
@@ -38,17 +29,12 @@
 }
 
 
-
-/* =========================
-   RIGHT : CONTENT
-========================= */
-
 .pp-case-right {
   max-width: 540px;
-  padding-top: 10px; /* optional fine tuning */
+  padding-top: 10px;
 }
 
-/* Heading */
+
 .pp-case-right h2 {
   font-size: 40px;
   font-weight: 900;
@@ -61,7 +47,7 @@
   font-family: cursive;
 }
 
-/* Description */
+
 .pp-case-desc {
   margin-top: 20px;
   font-size: 16px;
@@ -69,10 +55,6 @@
   color: #4b5563;
   line-height: 1.7;
 }
-
-/* =========================
-   STATS
-========================= */
 
 .pp-case-stats {
   margin-top: 32px;
@@ -98,9 +80,6 @@
   color: #6b7280;
 }
 
-/* =========================
-   CTA BUTTON
-========================= */
 
 .pp-case-btn {
   margin-top: 34px;
@@ -116,7 +95,6 @@
   position: relative;
 }
 
-/* Button shadow border */
 .pp-case-btn::after {
   content: "";
   position: absolute;
@@ -127,14 +105,11 @@
   z-index: -1;
 }
 
-/* Hover effect */
+
 .pp-case-btn:hover::after {
   transform: translate(2px, 2px);
 }
 
-/* =========================
-   BRAND LOGOS STRIP
-========================= */
 
 .pp-case-brands {
   margin-top: 40px;
@@ -156,9 +131,6 @@
   opacity: 1;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
 
 @media (max-width: 992px) {
   .pp-case-wrapper {
@@ -196,33 +168,26 @@
 }
 
 
-
-
-
-/* =========================
-   BRAND LOGOS STRIP (Updated)
-========================= */
-
 .pp-case-brands {
   margin-top: 40px;
   display: flex;
   align-items: center;
   gap: 28px;
   position: relative;
-  padding-bottom: 15px; /* Line aur logos ke beech gap */
-  border-bottom: 2px solid #e5e7eb; /* Yeh light grey base line hai */
+  padding-bottom: 15px; 
+  border-bottom: 2px solid #e5e7eb; 
   width: 100%;
 }
 
-/* Teal Color Active Line */
+
 .pp-case-brands::after {
   content: "";
   position: absolute;
-  bottom: -2px; /* Base line ke upar match karne ke liye */
+  bottom: -2px;
   left: 0;
-  width: 25%; /* Jitna bada green bar chahiye */
-  height: 3px; /* Bar ki thickness */
-  background-color: #0ea5a4; /* Teal color jo image mein hai */
+  width: 25%; 
+  height: 3px; 
+  background-color: #0ea5a4; 
   border-radius: 2px;
 }
 
@@ -230,12 +195,256 @@
   height: 22px;
   object-fit: contain;
   filter: grayscale(100%);
-  opacity: 0.5; /* Thoda light dikhne ke liye */
+  opacity: 0.5; 
   transition: all 0.3s ease;
 }
 
-/* Hover karne par color wapas aaye */
+
 .pp-case-brands img:hover {
   filter: grayscale(0%);
   opacity: 1;
+} 
+
+
+
+
+
+
+
+
+@media (max-width: 992px) {
+  .pp-case-wrapper {
+    flex-direction: column;
+    gap: 60px;
+    padding: 0 20px;
+  }
+
+  .pp-case-left {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+
+  .pp-case-img {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    left: auto;
+    top: auto;
+  }
+
+  .pp-case-right {
+    max-width: 100%;
+    padding-top: 0;
+    text-align: center;
+  }
+
+  .pp-case-right h2 {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  .pp-case-desc {
+    font-size: 15px;
+    margin-top: 16px;
+    padding: 0 10px;
+  }
+
+  .pp-case-stats {
+    margin-top: 28px;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .pp-case-stats div {
+    align-items: center;
+  }
+
+  .pp-case-stats strong {
+    font-size: 20px;
+  }
+
+  .pp-case-stats span {
+    font-size: 12px;
+  }
+
+  .pp-case-btn {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .pp-case-brands {
+    margin-top: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 12px;
+  }
+
+  .pp-case-brands::after {
+    width: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .pp-case-brands img {
+    height: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .pp-case-section {
+    padding: 60px 0;
+  }
+
+  .pp-case-wrapper {
+    gap: 40px;
+  }
+
+  .pp-case-right h2 {
+    font-size: 28px;
+  }
+
+  .pp-case-desc {
+    font-size: 14px;
+    padding: 0 5px;
+  }
+
+  .pp-case-stats {
+    gap: 20px;
+    margin-top: 24px;
+  }
+
+  .pp-case-stats strong {
+    font-size: 18px;
+  }
+
+  .pp-case-stats span {
+    font-size: 11px;
+  }
+
+  .pp-case-btn {
+    height: 42px;
+    padding: 0 24px;
+    font-size: 13px;
+  }
+
+  .pp-case-brands {
+    gap: 16px;
+    margin-top: 28px;
+  }
+
+  .pp-case-brands img {
+    height: 16px;
+  }
+}
+
+/* Tablet Optimization */
+@media (min-width: 577px) and (max-width: 768px) {
+  .pp-case-section {
+    padding: 70px 0;
+  }
+
+  .pp-case-wrapper {
+    padding: 0 40px;
+    gap: 50px;
+  }
+
+  .pp-case-right h2 {
+    font-size: 34px;
+  }
+
+  .pp-case-desc {
+    font-size: 16px;
+    padding: 0 20px;
+  }
+
+  .pp-case-stats {
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .pp-case-stats div {
+    min-width: 120px;
+  }
+
+  .pp-case-brands {
+    gap: 24px;
+  }
+
+  .pp-case-brands img {
+    height: 20px;
+  }
+}
+
+/* Small Mobile (Extra Small Screens) */
+@media (max-width: 380px) {
+  .pp-case-right h2 {
+    font-size: 24px;
+  }
+
+  .pp-case-desc {
+    font-size: 13px;
+  }
+
+  .pp-case-stats strong {
+    font-size: 16px;
+  }
+
+  .pp-case-brands {
+    gap: 12px;
+  }
+
+  .pp-case-brands img {
+    height: 14px;
+  }
+}
+
+/* Landscape Mode for Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .pp-case-section {
+    padding: 40px 0;
+  }
+
+  .pp-case-wrapper {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .pp-case-left {
+    width: 40%;
+    height: auto;
+  }
+
+  .pp-case-right {
+    width: 60%;
+    text-align: left;
+  }
+
+  .pp-case-desc {
+    padding: 0;
+  }
+
+  .pp-case-stats {
+    justify-content: flex-start;
+  }
+
+  .pp-case-stats div {
+    align-items: flex-start;
+  }
+
+  .pp-case-brands {
+    justify-content: flex-start;
+  }
+
+  .pp-case-brands::after {
+    left: 0;
+    transform: none;
+  }
 }

@@ -4,17 +4,12 @@ function Section06() {
   return (
     <section className="pp-steps-section">
       <div className="container">
-
-        {/* HEADING */}
         <h2 className="pp-steps-heading">
           Fast launch. Fast results. <br />
           <span>Here’s how.</span>
         </h2>
-
-        {/* CONTENT */}
         <div className="pp-steps-content">
 
-          {/* LEFT STEPS */}
           <div className="pp-steps-left">
 
             <div className="pp-step muted">
@@ -46,9 +41,7 @@ function Section06() {
 
           </div>
 
-          {/* RIGHT PLACEHOLDER */}
           <div className="pp-steps-right">
-            {/* future image / animation */}
           </div>
 
         </div>

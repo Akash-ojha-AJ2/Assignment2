@@ -9,7 +9,6 @@ function Section01() {
       <div className="container-fluid px-5">
         <div className="row align-items-center">
 
-          {/* LEFT CONTENT */}
           <div className="col-lg-6 hero-left">
             <h1>
               Meet your <br />
@@ -34,10 +33,8 @@ function Section01() {
             </div>
           </div>
 
-          {/* RIGHT IMAGES */}
           <div className="col-lg-6 hero-right">
 
-            {/* tilted postcard */}
             <img src={Image02} className="postcard-img" alt="" />
             <img src={Image01} className="trend-image" alt=""/>
 

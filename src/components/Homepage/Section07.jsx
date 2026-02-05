@@ -8,12 +8,10 @@ function Section07() {
     <section className="pp-social-section">
       <div className="container">
 
-        {/* HEADING */}
         <h2 className="pp-social-heading">
           PostPilot is 🔥 for <span>DTC</span>
         </h2>
 
-        {/* CARDS */}
         <div className="pp-social-cards">
 
           <div className="pp-social-card">
@@ -78,7 +76,7 @@ function Section07() {
 
         </div>
 
-        {/* CTA */}
+
         <div className="pp-social-cta">
           <button className="pp-btn pp-btn-orange">
             TRY IT RISK-FREE

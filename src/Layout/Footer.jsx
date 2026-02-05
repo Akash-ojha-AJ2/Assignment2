@@ -1,8 +1,7 @@
 import React from 'react';
 import './Footer.css';
 
-// Images Import
-import logo from '../assets/Logo.png'; // Ye sirf teal icon wali image hai
+import logo from '../assets/Logo.png'; 
 import ecoLogo from '../assets/FooterLogo02.png';
 
 function Footer() {
@@ -10,10 +9,8 @@ function Footer() {
     <footer className="pp-footer">
       <div className="pp-footer-container">
         
-        {/* TOP SECTION */}
         <div className="pp-footer-top">
           
-          {/* Column 1: Eco */}
           <div className="pp-footer-eco">
             <img src={ecoLogo} alt="Eco Friendly" className="pp-eco-logo" />
             <p className="pp-eco-text">
@@ -21,7 +18,6 @@ function Footer() {
             </p>
           </div>
 
-          {/* Column 2: Company */}
           <div className="pp-footer-links">
             <h4>Company</h4>
             <ul>
@@ -33,9 +29,8 @@ function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: More Links */}
           <div className="pp-footer-links">
-            <h4 style={{visibility: 'hidden'}}>More</h4> {/* Spacing ke liye */}
+            <h4 style={{visibility: 'hidden'}}>More</h4> 
             <ul>
               <li><a href="#pricing">Pricing</a></li>
               <li><a href="#reviews">Reviews</a></li>
@@ -45,7 +40,6 @@ function Footer() {
             </ul>
           </div>
 
-          {/* Column 4: Contact */}
           <div className="pp-footer-contact">
             <h4>Contact</h4>
             <div className="pp-contact-item">
@@ -57,7 +51,6 @@ function Footer() {
           </div>
         </div>
 
-        {/* BOTTOM SECTION */}
         <div className="pp-footer-bottom">
           <div className="pp-footer-brand">
             <div className="pp-brand-logo-wrapper">

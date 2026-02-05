@@ -1,126 +1,328 @@
-/* WRAPPER */
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar Wrapper */
 .pp-nav-wrapper {
-  height: 72px;
-  background: #ffffff;
-  border-bottom: 1px solid #e5e7eb;
-  font-family: Inter, sans-serif;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
 }
 
-/* CONTAINER */
+/* Nav Container */
 .pp-nav-container {
-  max-width: 1280px;
-  height: 100%;
+  max-width: 1200px;
   margin: 0 auto;
- 
+  padding: 0 20px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  position: relative;
 }
 
-/* BRAND */
+/* Logo and Brand */
 .pp-nav-brand {
   display: flex;
   align-items: center;
-  gap: 10px;
   text-decoration: none;
+  color: inherit;
+  z-index: 1001;
 }
 
-.LogoImage{
-  height: 40px;
-  width: 60px;
+.LogoImage {
+  height: 32px;
+  width: auto;
+  margin-right: 10px;
 }
 
 .pp-nav-logo-text {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 700;
-  color: #111827;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
 }
 
-/* RIGHT */
+/* Hamburger Button */
+.pp-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1001;
+}
+
+.pp-hamburger svg {
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+/* Navigation Right Section */
 .pp-nav-right {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 40px;
 }
 
-/* MENU */
+/* Navigation Menu */
 .pp-nav-menu {
   display: flex;
-  gap: 28px;
   list-style: none;
+  gap: 32px;
+  align-items: center;
   margin: 0;
   padding: 0;
 }
 
-.pp-nav-link {
-  font-size: 15px;
-  font-weight: 500;
-  color: #111827;
+.pp-nav-link,
+.nav-link {
   text-decoration: none;
-}
-
-.pp-nav-link:hover {
-  color: #10b981;
-}
-
-/* BUTTONS */
-.pp-nav-buttons {
-  display: flex;
-  gap: 16px;
-}
-
-/* BUTTON BASE */
-.pp-nav-btn {
+  color: #333;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 8px 0;
   position: relative;
-  height: 44px;
-  padding: 0 28px;
-  border-radius: 14px;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  border: 2px solid #2b2e34;
-  background: #ffffff;
-  color: #2b2e34;
-}
-
-.pp-nav-btn::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 14px;
-  border: 2px solid #2b2e34;
-  transform: translate(4px, 4px);
-  z-index: -1;
-}
-
-.pp-nav-btn:hover::after {
-  transform: translate(2px, 2px);
-}
-
-/* VARIANTS */
-.pp-nav-btn-outline {
-  background: #ffffff;
-}
-
-.pp-nav-btn-orange {
-  background: #ff6a2a;
-  color: #ffffff;
-}
-
-
-
-.nav-item-dropdown .nav-link {
+  transition: color 0.3s ease;
   display: flex;
   align-items: center;
   gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.pp-nav-link:hover,
+.nav-link:hover {
+  color: #ff6b35;
+}
+
+/* Dropdown Styles */
+.nav-item-dropdown {
+  position: relative;
 }
 
 .nav-arrow {
   display: inline-flex;
-  transition: transform 0.2s ease;
+  align-items: center;
+  transition: transform 0.3s ease;
 }
 
-/* hover effect (optional) */
 .nav-item-dropdown:hover .nav-arrow {
   transform: rotate(180deg);
+}
+
+/* Buttons Container */
+.pp-nav-buttons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Button Base */
+.pp-nav-btn {
+  padding: 6px 16px;    /* Pehle 10px 24px tha */
+  border-radius: 8px;   /* Corner thode kam round kiye */
+  font-weight: 700;
+  font-size: 14px;      /* Font size chhota kar diya */
+  cursor: pointer;
+  transition: all 0.1s ease;
+  border: 2px solid #2d2e32; 
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Login Button */
+.pp-nav-btn-outline {
+  background-color: #ffffff;
+  color: #2d2e32;
+  /* Solid Black Shadow */
+  box-shadow: 4px 4px 0px 0px #2d2e32; 
+}
+
+.pp-nav-btn-outline:hover {
+  /* Hover pe shadow thodi chhoti hogi click feel dene ke liye */
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0px 0px #2d2e32;
+}
+
+.pp-nav-btn-orange {
+  background-color: #ff6b35; /* Linear gradient hata kar solid color */
+  color: white;
+  box-shadow: 4px 4px 0px 0px #2d2e32;
+}
+
+.pp-nav-btn-orange:hover {
+  background-color: #ff5a25;
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0px 0px #2d2e32;
+}
+
+.pp-nav-btn-orange:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0px 0px #2d2e32;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .pp-nav-container {
+    padding: 0 16px;
+  }
+  
+  .pp-nav-right {
+    gap: 24px;
+  }
+  
+  .pp-nav-menu {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pp-hamburger {
+    display: block;
+  }
+  
+  .pp-nav-right {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    gap: 0;
+    z-index: 1000;
+  }
+  
+  .pp-nav-right.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .pp-nav-menu {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    margin-bottom: 20px;
+  }
+  
+  .pp-nav-menu li {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .pp-nav-link,
+  .nav-link {
+    padding: 16px 0;
+    width: 100%;
+    justify-content: center;
+    font-size: 17px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .pp-nav-menu li:last-child .pp-nav-link {
+    border-bottom: none;
+  }
+  
+  .pp-nav-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    margin-top: 10px;
+  }
+  
+  .pp-nav-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    height: 46px;
+    border-radius: 10px;
+  }
+}
+
+/* Tablet Adjustments */
+@media (min-width: 769px) and (max-width: 900px) {
+  .pp-nav-menu {
+    gap: 16px;
+  }
+  
+  .pp-nav-buttons {
+    gap: 10px;
+  }
+  
+  .pp-nav-btn {
+    padding: 10px 18px;
+    font-size: 14px;
+    height: 38px;
+  }
+  
+  .pp-nav-logo-text {
+    font-size: 22px;
+  }
+  
+  .LogoImage {
+    height: 28px;
+  }
+}
+
+/* Animation for menu items */
+.pp-nav-menu li {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.pp-nav-right.active .pp-nav-menu li {
+  animation: slideIn 0.3s ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add delay for each menu item */
+.pp-nav-menu li:nth-child(1) { animation-delay: 0.1s; }
+.pp-nav-menu li:nth-child(2) { animation-delay: 0.2s; }
+.pp-nav-menu li:nth-child(3) { animation-delay: 0.3s; }
+.pp-nav-menu li:nth-child(4) { animation-delay: 0.4s; }
+
+/* Animation for buttons in mobile menu */
+.pp-nav-right.active .pp-nav-buttons {
+  animation: fadeIn 0.4s ease 0.5s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

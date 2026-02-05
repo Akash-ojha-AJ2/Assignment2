@@ -1,10 +1,8 @@
-/* ============================================================
-   SECTION 10: LATEST TRENDS & INSIGHTS
-   ============================================================ */
+
 
 .pp-insights-section {
   padding: 80px 0;
-  background-color: #f9fafb; /* Light background */
+  background-color: #f9fafb; 
   font-family: 'Inter', sans-serif;
   text-align: center;
 }
@@ -15,7 +13,7 @@
   padding: 0 20px;
 }
 
-/* Header Style */
+
 .pp-insights-header {
   font-size: 48px;
   font-weight: 800;
@@ -24,19 +22,19 @@
 }
 
 .pp-insights-header span {
-  color: #0ea5a4; /* Teal color for 'insights' */
-  font-family: cursive; /* Script font style */
+  color: #0ea5a4; 
+  font-family: cursive; 
   font-weight: 500;
 }
 
-/* Grid Layout */
+
 .pp-insights-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
-/* Card Style */
+
 .pp-insight-card {
   text-align: left;
   cursor: pointer;
@@ -49,7 +47,7 @@
 
 .pp-insight-img-wrapper {
   width: 100%;
-  border-radius: 20px; /* Rounded corners like screenshot */
+  border-radius: 20px;
   overflow: hidden;
   margin-bottom: 20px;
   aspect-ratio: 16 / 10;
@@ -70,7 +68,7 @@
   padding-right: 10px;
 }
 
-/* Responsive */
+
 @media (max-width: 992px) {
   .pp-insights-grid {
     grid-template-columns: repeat(2, 1fr);

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Section10.css';
 
-// Images import karein (path check kar lein)
+
 import blogImg1 from '../../assets/Section10Image01.png';
 import blogImg2 from '../../assets/Section10Image02.jpg';
 import blogImg3 from '../../assets/Section10Image03.jpg';

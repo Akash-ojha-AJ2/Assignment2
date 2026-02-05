@@ -4,7 +4,6 @@
   font-family: Inter, sans-serif;
 }
 
-/* Heading */
 .why-heading {
   font-size: 42px;
   font-weight: 800;
@@ -17,7 +16,6 @@
   font-family: cursive;
 }
 
-/* Content layout */
 .why-content {
   margin-top: 80px;
   display: flex;
@@ -27,7 +25,6 @@
   flex-wrap: wrap;
 }
 
-/* Left & right boxes */
 .why-box h3 {
   font-size: 44px;
   font-weight: 800;
@@ -41,7 +38,7 @@
   line-height: 1.4;
 }
 
-/* Center image */
+
 .why-image {
   text-align: center;
 }
@@ -54,4 +51,262 @@
   margin-top: 12px;
   font-size: 13px;
   color: #6b7280;
+}
+
+
+/* Mobile Responsive Improvements */
+@media (max-width: 992px) {
+  .why-section {
+    padding: 80px 0;
+  }
+
+  .why-heading {
+    font-size: 32px;
+    padding: 0 20px;
+    line-height: 1.3;
+  }
+
+  .why-content {
+    margin-top: 50px;
+    gap: 60px;
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .why-box {
+    text-align: center;
+    max-width: 280px;
+  }
+
+  .why-box h3 {
+    font-size: 36px;
+  }
+
+  .why-box p {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+
+  .why-image img {
+    width: 150px;
+    margin: 0 auto;
+  }
+
+  .why-caption {
+    font-size: 13px;
+    margin-top: 10px;
+  }
+}
+
+/* Mobile (768px से छोटे) */
+@media (max-width: 768px) {
+  .why-section {
+    padding: 60px 0;
+  }
+
+  .why-heading {
+    font-size: 28px;
+    padding: 0 16px;
+  }
+
+  .why-content {
+    margin-top: 40px;
+    gap: 40px;
+    padding: 0 16px;
+  }
+
+  .why-box h3 {
+    font-size: 32px;
+  }
+
+  .why-box p {
+    font-size: 13.5px;
+    line-height: 1.5;
+  }
+
+  .why-image img {
+    width: 130px;
+  }
+
+  .why-caption {
+    font-size: 12.5px;
+  }
+}
+
+/* Small Mobile (576px से छोटे) */
+@media (max-width: 576px) {
+  .why-section {
+    padding: 50px 0;
+  }
+
+  .why-heading {
+    font-size: 26px;
+  }
+
+  .why-heading br {
+    display: none; /* Mobile pe line breaks hata do */
+  }
+
+  .why-content {
+    gap: 32px;
+    margin-top: 32px;
+  }
+
+  .why-box {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .why-box h3 {
+    font-size: 30px;
+  }
+
+  .why-box p {
+    font-size: 13px;
+    padding: 0 10px;
+  }
+
+  .why-box p br {
+    display: inline; /* Text ko wrap karne do */
+  }
+
+  .why-image img {
+    width: 120px;
+  }
+
+  .why-caption {
+    font-size: 12px;
+  }
+}
+
+/* Extra Small Screens (400px से छोटे) */
+@media (max-width: 400px) {
+  .why-heading {
+    font-size: 24px;
+  }
+
+  .why-content {
+    gap: 28px;
+    margin-top: 28px;
+  }
+
+  .why-box h3 {
+    font-size: 28px;
+  }
+
+  .why-box p {
+    font-size: 12.5px;
+    padding: 0 5px;
+  }
+
+  .why-image img {
+    width: 110px;
+  }
+
+  .why-caption {
+    font-size: 11.5px;
+  }
+}
+
+/* Tablet Optimization (768px - 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+  .why-section {
+    padding: 90px 0;
+  }
+
+  .why-content {
+    gap: 80px;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .why-box {
+    width: 30%;
+    min-width: 200px;
+  }
+
+  .why-image {
+    order: 3; /* Image ko last mein le aao */
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .why-image img {
+    width: 160px;
+  }
+}
+
+/* Large Tablets (992px - 1200px) */
+@media (min-width: 993px) and (max-width: 1200px) {
+  .why-content {
+    gap: 120px;
+  }
+}
+
+/* Landscape Mode for Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .why-section {
+    padding: 40px 0;
+  }
+
+  .why-content {
+    flex-direction: row;
+    gap: 40px;
+    margin-top: 30px;
+  }
+
+  .why-box {
+    width: 30%;
+  }
+
+  .why-image {
+    order: 0;
+    width: auto;
+    margin-top: 0;
+  }
+}
+
+/* Better spacing for text */
+.why-box p {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Add some subtle animation for better engagement */
+.why-box h3 {
+  transition: transform 0.3s ease;
+}
+
+@media (min-width: 993px) {
+  .why-box:hover h3 {
+    transform: scale(1.05);
+  }
+}
+
+/* Ensure container has proper max-width */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Improve image loading */
+.why-image img {
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+@media (min-width: 993px) {
+  .why-image:hover img {
+    transform: scale(1.05);
+  }
+}
+
+/* Text center alignment for all boxes */
+.why-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

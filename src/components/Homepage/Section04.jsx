@@ -9,14 +9,12 @@ function Section04() {
     <section className="features-section">
       <div className="container">
 
-        {/* MAIN HEADING */}
         <h2 className="features-heading">
           PostPilot makes it a <span>cinch</span> to <br />
           send personalized, profit- <br />
           generating postcards.
         </h2>
 
-        {/* FEATURE 1 */}
         <div className="feature-block left">
           <h3>
             <span>Powerful</span><br />
@@ -44,7 +42,6 @@ function Section04() {
           </div>
         </div>
 
-        {/* FEATURE 2 */}
         <div className="feature-block right">
           <h3>
             <span>Fight back</span> against iOS <br />
@@ -74,7 +71,6 @@ function Section04() {
           </div>
         </div>
 
-        {/* FEATURE 3 */}
         <div className="feature-block left">
           <h3>
             Done for <span>you</span>

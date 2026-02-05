@@ -1,5 +1,5 @@
 import React from 'react';
-import './Section09.css'; // Nayi CSS file import karein
+import './Section09.css';
 import handImage from '../../assets/Section09Image.png'; 
 
 function Section09() {
@@ -7,7 +7,6 @@ function Section09() {
     <section className="risk-free-container">
       <div className="risk-free-content">
         
-        {/* Left Part */}
         <div className="risk-free-left">
           <h2>Try PostPilot <br /> Risk-Free</h2>
           <p className="risk-subtext">No contracts. No commitments. Guaranteed results.*</p>
@@ -26,7 +25,6 @@ function Section09() {
           </p>
         </div>
 
-        {/* Right Part */}
         <div className="risk-free-right">
           <img 
             src={handImage} 

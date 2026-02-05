@@ -20,29 +20,29 @@ function Section02() {
           of top DTC <span>brands.</span>
         </h2>
 
-       <div className="brands-row">
+        <div className="brands-row">
 
-  <div className="brand-card">
-    <img src={brand1} alt="Run Gum" className="brand-image" />
-    <img src={brand1Name} alt="Run Gum name" className="brand-name" />
-  </div>
+          <div className="brand-card">
+            <img src={brand1} alt="Run Gum" className="brand-image" />
+            <img src={brand1Name} alt="Run Gum name" className="brand-name" />
+          </div>
 
-  <div className="brand-card">
-    <img src={brand2} alt="Beardbrand" className="brand-image" />
-    <img src={brand2Name} alt="Beardbrand name" className="brand-name" />
-  </div>
+          <div className="brand-card">
+            <img src={brand2} alt="Beardbrand" className="brand-image" />
+            <img src={brand2Name} alt="Beardbrand name" className="brand-name" />
+          </div>
 
-  <div className="brand-card">
-    <img src={brand3} alt="Promix" className="brand-image" />
-    <img src={brand3Name} alt="Promix name" className="brand-name" />
-  </div>
+          <div className="brand-card">
+            <img src={brand3} alt="Promix" className="brand-image" />
+            <img src={brand3Name} alt="Promix name" className="brand-name" />
+          </div>
 
-  <div className="brand-card">
-    <img src={brand4} alt="Brand 4" className="brand-image" />
-    <img src={brand4Name} alt="Brand 4 name" className="brand-name" />
-  </div>
+          <div className="brand-card">
+            <img src={brand4} alt="Brand 4" className="brand-image" />
+            <img src={brand4Name} alt="Brand 4 name" className="brand-name" />
+          </div>
 
-</div>
+        </div>
 
       </div>
     </section>

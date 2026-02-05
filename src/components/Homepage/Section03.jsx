@@ -6,16 +6,13 @@ function Section03() {
     <section className="why-section">
       <div className="container text-center">
 
-        {/* Heading */}
         <h2 className="why-heading">
           Why use direct mail? <br />
           It <span>works</span> like crazy.
         </h2>
 
-        {/* Content */}
         <div className="why-content">
 
-          {/* Left */}
           <div className="why-box">
             <h3>28X</h3>
             <p>
@@ -24,13 +21,10 @@ function Section03() {
             </p>
           </div>
 
-          {/* Center Image */}
           <div className="why-image">
             <img src={TrendImage} alt="Direct mail vs email" />
             <p className="why-caption">Your messages get read</p>
           </div>
-
-          {/* Right */}
           <div className="why-box">
             <h3>17 Days</h3>
             <p>

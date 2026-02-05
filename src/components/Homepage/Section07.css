@@ -4,7 +4,7 @@
   font-family: Inter, sans-serif;
 }
 
-/* Heading */
+
 .pp-social-heading {
   text-align: center;
   font-size: 44px;
@@ -18,14 +18,14 @@
   font-family: cursive;
 }
 
-/* Cards row */
+
 .pp-social-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 28px;
 }
 
-/* Card */
+
 .pp-social-card {
   border: 1.5px solid #2b2e34;
   border-radius: 16px;
@@ -36,7 +36,7 @@
   justify-content: space-between;
 }
 
-/* Header */
+
 .pp-social-header {
   display: flex;
   align-items: center;
@@ -62,27 +62,27 @@
   color: #6b7280;
 }
 
-/* Twitter icon */
+
 .pp-twitter {
   margin-left: auto;
   font-style: normal;
   font-size: 16px;
 }
 
-/* Text */
+
 .pp-social-card p {
   font-size: 14px;
   color: #374151;
   line-height: 1.6;
 }
 
-/* CTA */
+
 .pp-social-cta {
   text-align: center;
   margin-top: 60px;
 }
 
-/* Responsive */
+
 @media (max-width: 992px) {
   .pp-social-cards {
     grid-template-columns: repeat(2, 1fr);
